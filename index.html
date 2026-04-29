@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A heartfelt birthday surprise for Shreya Desai — Happy 20th Birthday ❤️" />
+  <title>Happy Birthday, Shreya ❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Lato:wght@300;400&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ===================== FLOATING HEARTS CANVAS ===================== -->
+  <canvas id="heartsCanvas"></canvas>
+
+  <!-- ===================== LANDING SCREEN ===================== -->
+  <section id="landing" class="screen active">
+    <div class="landing-content fade-in-up">
+      <p class="landing-eyebrow">for you, always 🌸</p>
+      <h1 class="landing-title">Hey Shreya ❤️</h1>
+      <p class="landing-sub">I made something for you...</p>
+      <button id="beginBtn" class="btn-begin" onclick="beginJourney()">
+        <span>Click to begin</span>
+        <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M5 12h14M12 5l7 7-7 7" />
+        </svg>
+      </button>
+    </div>
+  </section>
+
+  <!-- ===================== MAIN SITE (hidden until begin) ===================== -->
+  <div id="mainSite" class="hidden">
+
+    <!-- -------- NAV -------- -->
+    <nav id="navbar">
+      <span class="nav-logo">Shreya ❤️</span>
+      <ul class="nav-links">
+        <li><a href="#message">Message</a></li>
+        <li><a href="#memories">Memories</a></li>
+        <li><a href="#ending">Always You</a></li>
+      </ul>
+      <button id="musicToggle" class="music-btn" onclick="toggleMusic()" title="Play music">
+        <svg id="musicIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M9 18V5l12-2v13" />
+          <circle cx="6" cy="18" r="3" />
+          <circle cx="18" cy="16" r="3" />
+        </svg>
+        <span id="musicLabel">Pause</span>
+      </button>
+    </nav>
+
+    <!-- -------- HERO / MESSAGE SECTION -------- -->
+    <section id="message" class="section section--message">
+      <div class="message-inner reveal">
+        <p class="section-tag">30th April 2026 · 20 Years Young 🎂</p>
+        <h2 class="message-heading">Happy 20th Birthday,<br>Shreya ❤️</h2>
+        <div class="message-body">
+          <p id="typingTarget" class="typing-text"></p>
+        </div>
+        <div class="confetti-row" aria-hidden="true">
+          <span>🌸</span><span>✨</span><span>🌷</span><span>💕</span><span>🌸</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- -------- MEMORIES SECTION -------- -->
+    <section id="memories" class="section section--memories">
+      <div class="memories-inner reveal">
+        <p class="section-tag">A little collection just for you 📷</p>
+        <h2 class="memories-heading">Our Moments</h2>
+        <p class="memories-sub">The ones that made everything worth it.</p>
+
+        <div class="gallery-grid">
+
+          <!-- MEMORY 1 -->
+          <div class="gallery-card reveal">
+            <!-- 📸 REPLACE: swap images/memory1.png with your actual photo -->
+            <div class="gallery-img-wrap">
+              <img src="images/memory1.jpeg" alt="Our memory" class="gallery-img" loading="lazy" />
+              <div class="gallery-overlay">
+                <span class="gallery-caption-hover">My favorite moments ✨</span>
+              </div>
+            </div>
+            <p class="gallery-caption">My favorite moments</p>
+          </div>
+
+          <!-- MEMORY 2 -->
+          <div class="gallery-card reveal">
+            <!-- 📸 REPLACE: swap images/memory2.png with your actual photo -->
+            <div class="gallery-img-wrap">
+              <img src="images\WhatsApp Image 2026-04-29 at 8.11.43 PM.jpeg" alt="Our memory" class="gallery-img"
+                loading="lazy" />
+              <div class="gallery-overlay">
+                <span class="gallery-caption-hover">You make everything better 💕</span>
+              </div>
+            </div>
+            <p class="gallery-caption">You make everything better</p>
+          </div>
+
+          <!-- MEMORY 3 -->
+          <div class="gallery-card reveal">
+            <!-- 📸 REPLACE: swap images/memory3.png with your actual photo -->
+            <div class="gallery-img-wrap">
+              <img src="images/WhatsApp Image 2026-04-29 at 8.10.43 PM.jpeg" alt="Our memory" class="gallery-img"
+                loading="lazy" />
+              <div class="gallery-overlay">
+                <span class="gallery-caption-hover">Still my favorite smile 🌸</span>
+              </div>
+            </div>
+            <p class="gallery-caption">Still my favorite smile</p>
+          </div>
+
+          <!-- MEMORY 4 — add more placeholders below -->
+
+
+        </div>
+      </div>
+    </section>
+
+    <!-- -------- ENDING SECTION -------- -->
+    <section id="ending" class="section section--ending">
+      <div class="ending-inner reveal">
+        <div class="ending-glow"></div>
+        <p class="ending-eyebrow">always & forever 💌</p>
+        <h2 class="ending-quote">
+          "No matter where life goes…<br>
+          <em>it's always you</em> ❤️"
+        </h2>
+        <p class="ending-name">— With all my love, always</p>
+        <div class="ending-hearts" aria-hidden="true">
+          <span class="eh eh1">❤️</span>
+          <span class="eh eh2">🌸</span>
+          <span class="eh eh3">❤️</span>
+          <span class="eh eh4">💕</span>
+          <span class="eh eh5">❤️</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- -------- FOOTER -------- -->
+    <footer class="site-footer">
+      <p>Made with love, just for you 🌸 · Shreya Desai · 20th Birthday 2026</p>
+    </footer>
+
+  </div><!-- /mainSite -->
+
+  <!-- ===================== MUSIC ===================== -->
+  <audio id="bgMusic" loop>
+    <source src="Happy_birthday_to_you_MIDI(chosic.com).mp3" type="audio/mpeg" />
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
